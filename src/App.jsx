@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import WebFont from 'webfontloader';
+
+import Header from './components/Header/Header';
 
 function App() {
-	return <div>React</div>;
+	useEffect(() => {
+		WebFont.load({
+			google: {
+				families: ['Inter', 'sans-serif'],
+			},
+		});
+	}, []);
+
+	return <Header />;
 }
 
 export default App;
