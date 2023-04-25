@@ -1,8 +1,9 @@
 import React from 'react';
 
 import logo from '../../assets/img/logo.png';
-import { LogoStyled } from './Logo.styled';
 import { LOGO_ALTERNATIVE_TEXT } from '../../constants';
+
+import { LogoStyled } from './Logo.styled';
 
 const Logo = () => {
 	return (
