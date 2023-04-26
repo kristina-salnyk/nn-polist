@@ -5,7 +5,7 @@ const theme = Object.freeze({
 		desktop: '1200px',
 	},
 	colors: {
-		main: '#FF3839',
+		main: '#DD3436',
 		black: '#202020',
 		white: '#ffffff',
 		border: 'rgba(255, 255, 255, 0.34)',
@@ -29,6 +29,7 @@ const theme = Object.freeze({
 	filters: ['drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))'],
 	animation: {
 		cubicBezier: '0.5s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
+		easeOut: '0.3s ease-out',
 	},
 	spacing: ['4px', '8px', '16px', '32px', '64px', '128px'],
 	shape: {
