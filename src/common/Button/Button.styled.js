@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ButtonStyled = styled.button`
 	padding: 10px 20px;
+	min-width: 130px;
 	font-size: ${({ theme }) => theme.typography.size.s};
 	white-space: nowrap;
 	border: ${({ theme }) => theme.shape.borderWidth} solid
@@ -15,6 +16,6 @@ export const ButtonStyled = styled.button`
 	cursor: pointer;
 
 	&:hover {
-		background-color: transparent;
+		background-color: ${({ theme }) => theme.colors.button};
 	}
 `;

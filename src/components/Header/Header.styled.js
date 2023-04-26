@@ -23,6 +23,7 @@ export const HeaderContent = styled.div`
 		  position: absolute;
 		  top: 0;
 		  left: 50%;
+		  z-index: 2;
 		  transform: translate(-50%);
 		  width: 100%;
 		  padding: ${theme.spacing[2]}};
@@ -43,6 +44,7 @@ export const Backdrop = styled.div`
 		  position: fixed;
 		  top: 0;
 		  left: 0;
+		  z-index: 1;
 		  height: 100vh;
 		  width: 100vw;
 		  background-color: ${theme.colors.background.secondary};

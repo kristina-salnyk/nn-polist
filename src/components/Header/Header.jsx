@@ -21,6 +21,10 @@ import {
 const Header = () => {
 	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(true);
 
+	const closeMobileMenu = (event) => {
+		setIsMobileMenuOpened(false);
+	};
+
 	return (
 		<HeaderStyled>
 			<ContainerStyled>
@@ -30,17 +34,20 @@ const Header = () => {
 						<Logo />
 					</Link>
 					<NavBar isMobileMenuOpened={isMobileMenuOpened}>
-						<Navigation isMobileMenuOpened={isMobileMenuOpened}>
+						<Navigation
+							isMobileMenuOpened={isMobileMenuOpened}
+							onClick={closeMobileMenu}
+						>
 							<NavLink path={ROUTES.HOME} text='Home' />
 							<NavLink path={ROUTES.ABOUT_US} text='About us' />
 							<NavLink path={ROUTES.NEWS} text='News' />
-							<NavLink path={ROUTES.CAREERS} text='Careers' />
+							<NavLink path={ROUTES.FIND_JOB} text='Find job' />
 							<NavLink path={ROUTES.CONTACTS} text='Contacts' />
 						</Navigation>
 						<Button
 							type='button'
 							text='Contact us'
-							onClick={() => {}}
+							onClick={closeMobileMenu}
 							aria-expanded={isMobileMenuOpened}
 							aria-controls='mobile-menu'
 						/>

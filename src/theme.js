@@ -9,6 +9,7 @@ const theme = Object.freeze({
 		black: '#202020',
 		white: '#ffffff',
 		border: 'rgba(255, 255, 255, 0.34)',
+		button: 'rgba(221, 52, 54, 0.1)',
 		background: {
 			primary: '#F8F8F8',
 			secondary: '#202020',
@@ -52,6 +53,7 @@ const theme = Object.freeze({
 			xl: '20px',
 			xxl: '24px',
 			xxxl: '28px',
+			xxxxl: '48px',
 		},
 		weight: {
 			light: 300,

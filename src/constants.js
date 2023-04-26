@@ -2,6 +2,6 @@ export const ROUTES = {
 	HOME: '/',
 	ABOUT_US: '/about-us',
 	NEWS: '/news',
-	CAREERS: '/careers',
+	FIND_JOB: '/find-job',
 	CONTACTS: '/contacts',
 };
