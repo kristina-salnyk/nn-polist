@@ -1,9 +1,14 @@
 import styled from 'styled-components';
-import { Button } from '../../common/Button';
+
+import { Container } from '../../common/Container';
 
 export const HeaderStyled = styled.header`
 	background-color: ${({ theme }) => theme.colors.background.secondary};
 	border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+`;
+
+export const ContainerStyled = styled(Container)`
+	position: relative;
 `;
 
 export const HeaderContent = styled.div`
@@ -11,22 +16,72 @@ export const HeaderContent = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	${({ theme, isMobileMenuOpened }) =>
+		isMobileMenuOpened &&
+		`@media (max-width: ${theme.breakpoints.tablet[1]}) {
+		  position: absolute;
+		  top: 0;
+		  left: 50%;
+		  transform: translate(-50%);
+		  width: 100%;
+		  padding: ${theme.spacing[2]}};
+		 
+		  @media (min-width: ${theme.breakpoints.tablet[0]}) {
+		  	padding: ${theme.spacing[2]} ${theme.spacing[3]};
+		  }
+		 }`}
 `;
 
-export const NavBar = styled.nav`
+export const Backdrop = styled.div`
 	display: none;
 
+	${({ theme, isMobileMenuOpened }) =>
+		isMobileMenuOpened &&
+		`@media (max-width: ${theme.breakpoints.tablet[1]}) {
+		  display: block;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  height: 100vh;
+		  width: 100vw;
+		  background-color: ${theme.colors.background.secondary};
+	  }`}
+`;
+
+export const NavBar = styled.div`
+	@media (max-width: ${({ theme }) => theme.breakpoints.tablet[1]}) {
+		display: none;
+	}
+
+	${({ theme, isMobileMenuOpened }) =>
+		isMobileMenuOpened &&
+		`@media (max-width: ${theme.breakpoints.tablet[1]}) {
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  transform: translate(-50%);
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			gap: ${theme.spacing[3]}
+		}`};
+
 	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-		display: block;
+		display: flex;
+		align-items: center;
+		gap: ${({ theme }) => theme.spacing[5]};
 	}
 `;
 
-export const ButtonStyled = styled(Button)`
-	display: none;
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-		display: block;
-	}
+export const Navigation = styled.nav`
+	${({ theme, isMobileMenuOpened }) =>
+		isMobileMenuOpened &&
+		`@media (max-width: ${theme.breakpoints.tablet[1]}) {
+		  display: flex;
+		  flex-direction: column;
+		  gap: ${theme.spacing[2]}
+		 }`}
 `;
 
 export const MobileMenuButton = styled.button`
@@ -37,6 +92,7 @@ export const MobileMenuButton = styled.button`
 	background-color: transparent;
 	border: none;
 	transition: transform ${({ theme }) => theme.animation.easeOut};
+	cursor: pointer;
 
 	&:hover {
 		transform: rotate(180deg);

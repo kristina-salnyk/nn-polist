@@ -8,6 +8,7 @@ export const ButtonStyled = styled.button`
 		${({ theme }) => theme.colors.main};
 	border-radius: ${({ theme }) => theme.shape.borderRadius.s};
 	filter: ${({ theme }) => theme.filters[0]};
+	box-shadow: ${({ theme }) => theme.shadows[0]};
 	color: ${({ theme }) => theme.colors.text.secondary};
 	background-color: ${({ theme }) => theme.colors.main};
 	transition: background-color ${({ theme }) => theme.animation.cubicBezier};

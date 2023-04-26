@@ -20,6 +20,7 @@ const theme = Object.freeze({
 		},
 	},
 	shadows: [
+		'0px 4px 4px rgba(0, 0, 0, 0.15)',
 		'rgba(0, 0, 0, 0.1) 0 4px 12px',
 		'7px 4px 14px rgba(49, 21, 4, 0.07)',
 		'0 5px 7px -1px rgba(51, 51, 51, 0.23)',
