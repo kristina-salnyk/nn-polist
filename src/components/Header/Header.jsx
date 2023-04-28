@@ -19,7 +19,7 @@ import {
 } from './Header.styled';
 
 const Header = () => {
-	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(true);
+	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
 	const closeMobileMenu = (event) => {
 		setIsMobileMenuOpened(false);

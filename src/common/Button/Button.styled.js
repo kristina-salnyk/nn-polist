@@ -12,10 +12,11 @@ export const ButtonStyled = styled.button`
 	box-shadow: ${({ theme }) => theme.shadows[0]};
 	color: ${({ theme }) => theme.colors.text.secondary};
 	background-color: ${({ theme }) => theme.colors.main};
-	transition: background-color ${({ theme }) => theme.animation.cubicBezier};
+	transition: color,
+		background-color ${({ theme }) => theme.animation.cubicBezier};
 	cursor: pointer;
 
 	&:hover {
-		background-color: ${({ theme }) => theme.colors.button};
+		background-color: transparent;
 	}
 `;

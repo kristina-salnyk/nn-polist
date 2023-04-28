@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container } from '../../common/Container';
 
 import {
-	AccentText,
+	Accent,
 	ButtonStyled,
 	HeroContent,
 	HeroStyled,
@@ -15,12 +15,13 @@ import { ROUTES } from '../../constants';
 
 const Hero = () => {
 	const navigate = useNavigate();
+
 	return (
 		<HeroStyled>
 			<Container>
 				<HeroContent>
 					<p>
-						Welcome to <AccentText>N.N. Polist</AccentText>
+						Welcome to <Accent>N.N. Polist</Accent>
 					</p>
 					<Title>Find a job and become a professional</Title>
 					<Text>

@@ -72,7 +72,7 @@ export const NavBar = styled.div`
 	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		display: flex;
 		align-items: center;
-		gap: ${({ theme }) => theme.spacing[5]};
+		gap: ${({ theme }) => theme.spacing[7]};
 	}
 `;
 

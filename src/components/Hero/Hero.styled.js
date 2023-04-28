@@ -24,7 +24,7 @@ export const HeroStyled = styled.section`
 
 export const HeroContent = styled.div`
 	margin: 0 auto;
-	max-width: 350px;
+	max-width: 380px;
 	color: ${({ theme }) => theme.colors.text.secondary};
 	line-height: 1.2;
 	text-align: center;
@@ -51,11 +51,11 @@ export const Title = styled.h1`
 	}
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
 		margin: ${({ theme }) => theme.spacing[2]} 0;
-		font-size: ${({ theme }) => theme.typography.size.xxxxl};
+		font-size: ${({ theme }) => theme.typography.size.xxxxxl};
 	}
 `;
 
-export const AccentText = styled.span`
+export const Accent = styled.span`
 	color: ${({ theme }) => theme.colors.main};
 	font-weight: ${({ theme }) => theme.typography.weight.bold};
 `;

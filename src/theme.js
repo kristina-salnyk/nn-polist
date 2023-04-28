@@ -8,6 +8,7 @@ const theme = Object.freeze({
 		main: '#DD3436',
 		black: '#202020',
 		white: '#ffffff',
+		gray: '#D8D8D8',
 		border: 'rgba(255, 255, 255, 0.34)',
 		button: 'rgba(221, 52, 54, 0.1)',
 		background: {
@@ -18,6 +19,7 @@ const theme = Object.freeze({
 		text: {
 			primary: '#000000',
 			secondary: '#ffffff',
+			gray: '#696969',
 		},
 	},
 	shadows: [
@@ -33,7 +35,7 @@ const theme = Object.freeze({
 		cubicBezier: '0.5s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
 		easeOut: '0.3s ease-out',
 	},
-	spacing: ['4px', '8px', '16px', '32px', '64px', '128px'],
+	spacing: ['4px', '8px', '16px', '32px', '48px', '64px', '96px', '128px'],
 	shape: {
 		borderRadius: { s: '4px', m: '8px', xl: '50px' },
 		borderWidth: '2px',
@@ -53,7 +55,8 @@ const theme = Object.freeze({
 			xl: '20px',
 			xxl: '24px',
 			xxxl: '28px',
-			xxxxl: '48px',
+			xxxxl: '36px',
+			xxxxxl: '48px',
 		},
 		weight: {
 			light: 300,
