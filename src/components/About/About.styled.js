@@ -140,8 +140,9 @@ export const Accent = styled.span`
 
 export const ButtonStyled = styled(Button)`
 	margin-top: ${({ theme }) => theme.spacing[2]};
+	align-self: end;
 
-	@media (max-width: ${({ theme }) => theme.breakpoints.tablet[1]}) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
 		align-self: center;
 	}
 
