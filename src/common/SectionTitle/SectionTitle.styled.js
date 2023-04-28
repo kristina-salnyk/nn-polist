@@ -6,6 +6,10 @@ export const TitleWrap = styled.div`
 	width: 100%;
 	text-align: center;
 
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		margin-bottom: ${({ theme }) => theme.spacing[2]};
+	}
+
 	&::before {
 		position: absolute;
 		content: '';

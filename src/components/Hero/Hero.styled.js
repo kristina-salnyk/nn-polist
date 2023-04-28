@@ -17,7 +17,7 @@ export const HeroStyled = styled.section`
 	background-position: center;
 	background-size: cover;
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
 		padding: 200px 0;
 	}
 `;

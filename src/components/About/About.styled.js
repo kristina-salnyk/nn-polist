@@ -6,6 +6,10 @@ export const AboutStyled = styled.section`
 	padding: ${({ theme }) => theme.spacing[4]} 0;
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+		padding: ${({ theme }) => theme.spacing[5]} 0;
+	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		padding: ${({ theme }) => theme.spacing[6]} 0;
 	}
 `;
