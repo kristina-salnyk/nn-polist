@@ -3,12 +3,12 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import WebFont from 'webfontloader';
 
 import { SharedLayout } from './components/SharedLayout';
-import { ROUTES } from './constants';
 import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { News } from './pages/News';
 import { FindJob } from './pages/FindJob';
 import { Contacts } from './pages/Contacts';
+import { ROUTES } from './constants';
 
 const App = () => {
 	useEffect(() => {

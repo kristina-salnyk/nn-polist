@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { LoaderStyled } from './SharedLayout.styled';
@@ -16,6 +17,7 @@ const SharedLayout = () => (
 				<Outlet />
 			</Suspense>
 		</main>
+		<Footer />
 	</>
 );
 
