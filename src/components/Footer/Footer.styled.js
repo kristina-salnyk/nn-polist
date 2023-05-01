@@ -13,6 +13,7 @@ export const FooterContent = styled.div`
 
 export const Text = styled.p`
 	font-size: ${({ theme }) => theme.typography.size.xs};
+	color: ${({ theme }) => theme.colors.text.secondary};
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
 		font-size: ${({ theme }) => theme.typography.size.m};
