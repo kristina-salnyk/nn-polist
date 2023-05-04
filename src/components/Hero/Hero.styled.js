@@ -49,6 +49,7 @@ export const Title = styled.h1`
 		height: ${({ theme }) => theme.shape.borderWidth};
 		background-color: ${({ theme }) => theme.colors.main};
 	}
+
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
 		margin: ${({ theme }) => theme.spacing[2]} 0;
 		font-size: ${({ theme }) => theme.typography.size.xxxxxl};
