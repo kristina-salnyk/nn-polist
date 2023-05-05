@@ -4,7 +4,7 @@ import { NavLink as Link } from 'react-router-dom';
 import { Logo } from '../Logo';
 import { BurgerMenu } from '../BurgerMenu';
 import { Close } from '../Close';
-import { NavBar } from '../NavBar';
+import { Button } from '../../common/Button';
 import { ROUTES } from '../../constants';
 
 import {
@@ -13,6 +13,8 @@ import {
 	HeaderContent,
 	HeaderStyled,
 	MobileMenuButton,
+	NavBar,
+	NavigationStyled,
 } from './Header.styled';
 
 const Header = () => {
@@ -30,10 +32,13 @@ const Header = () => {
 					<Link to={ROUTES.HOME}>
 						<Logo />
 					</Link>
-					<NavBar
-						isMobileMenuOpened={isMobileMenuOpened}
-						onClose={closeMobileMenu}
-					/>
+					<NavBar isMobileMenuOpened={isMobileMenuOpened}>
+						<NavigationStyled
+							isMobileMenuOpened={isMobileMenuOpened}
+							onClick={closeMobileMenu}
+						/>
+						<Button type='button' text='Contact us' onClick={closeMobileMenu} />
+					</NavBar>
 					<MobileMenuButton
 						type='button'
 						onClick={() => setIsMobileMenuOpened((prevState) => !prevState)}

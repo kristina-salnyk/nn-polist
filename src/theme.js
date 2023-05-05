@@ -10,7 +10,7 @@ const theme = Object.freeze({
 		white: '#ffffff',
 		gray: '#D8D8D8',
 		border: 'rgba(255, 255, 255, 0.34)',
-		button: 'rgba(221, 52, 54, 0.1)',
+		button: 'rgba(221, 52, 54, 0.3)',
 		background: {
 			primary: '#F8F8F8',
 			secondary: '#202020',
@@ -37,7 +37,7 @@ const theme = Object.freeze({
 	},
 	spacing: ['4px', '8px', '16px', '32px', '48px', '64px', '96px', '128px'],
 	shape: {
-		borderRadius: { s: '4px', m: '8px', xl: '50px' },
+		borderRadius: { s: '4px', m: '8px', l: '50px' },
 		borderWidth: '2px',
 		opacity: 0.6,
 	},

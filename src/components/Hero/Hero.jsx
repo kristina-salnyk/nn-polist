@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Container } from '../../common/Container';
+import { ROUTES } from '../../constants';
 
 import {
 	Accent,
@@ -11,7 +12,6 @@ import {
 	Text,
 	Title,
 } from './Hero.styled';
-import { ROUTES } from '../../constants';
 
 const Hero = () => {
 	const navigate = useNavigate();
