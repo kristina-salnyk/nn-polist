@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const LogoStyled = styled.div`
+	display: inline-block;
 	font-family: ${({ theme }) => theme.typography.font.secondary};
 	font-weight: ${({ theme }) => theme.typography.weight.semiBold};
 	font-size: ${({ theme }) => theme.typography.size.l};

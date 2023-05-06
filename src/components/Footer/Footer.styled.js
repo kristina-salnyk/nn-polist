@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Navigation } from '../Navigation';
 
-export const FooterStyled = styled.header`
+export const FooterStyled = styled.footer`
 	background-color: ${({ theme }) => theme.colors.background.secondary};
 `;
 
@@ -12,37 +12,50 @@ export const FooterWrap = styled.div`
 
 export const FooterContent = styled.div`
 	padding: ${({ theme }) => theme.spacing[4]} 0;
-	color: ${({ theme }) => theme.colors.text.secondary};
-	line-height: 1.2;
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: baseline;
-	gap: ${({ theme }) => theme.spacing[4]};
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: ${({ theme }) => theme.spacing[3]};
+	font-size: ${({ theme }) => theme.typography.size.xs};
+	line-height: 1.2;
+	color: ${({ theme }) => theme.colors.text.secondary};
+
+	& a {
+		font-size: ${({ theme }) => theme.typography.size.xs};
+	}
+
+	& a.active {
+		color: inherit;
+	}
 
 	& a:hover,
 	& a.active:hover {
 		color: ${({ theme }) => theme.colors.main};
 	}
 
-	& a.active {
-		color: inherit;
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+		justify-content: space-between;
+		align-items: baseline;
+		font-size: ${({ theme }) => theme.typography.size.s};
 	}
 `;
 
 export const FooterContentStyled = styled(FooterContent)`
 	padding: ${({ theme }) => theme.spacing[3]} 0;
-
-	& a {
-		color: inherit;
-		transition: color ${({ theme }) => theme.animation.cubicBezier};
-	}
+	gap: ${({ theme }) => theme.spacing[1]};
 `;
 
 export const FooterColumn = styled.div`
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: ${({ theme }) => theme.spacing[2]};
+`;
+
+export const FooterColumnStyled = styled(FooterColumn)`
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		display: none;
+	}
 `;
 
 export const Title = styled.h2`
@@ -52,10 +65,9 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
 	max-width: 380px;
-	font-size: ${({ theme }) => theme.typography.size.xs};
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-		font-size: ${({ theme }) => theme.typography.size.s};
+		max-width: 330px;
 	}
 `;
 
@@ -63,6 +75,10 @@ export const Links = styled.div`
 	display: flex;
 	flex-wrap: nowrap;
 	gap: ${({ theme }) => theme.spacing[2]};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		justify-content: center;
+	}
 `;
 
 export const NavigationStyled = styled(Navigation)`
@@ -76,35 +92,36 @@ export const NavigationStyled = styled(Navigation)`
 
 export const Contacts = styled.address`
 	font-style: inherit;
-	font-size: ${({ theme }) => theme.typography.size.xs};
 	display: flex;
 	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing[2]};
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-		font-size: ${({ theme }) => theme.typography.size.s};
-	}
 
 	& > a {
+		padding: ${({ theme }) => theme.spacing[1]};
 		color: inherit;
 		display: flex;
 		align-items: center;
 		gap: ${({ theme }) => theme.spacing[1]};
+		font-size: ${({ theme }) => theme.typography.size.s};
 		transition: color ${({ theme }) => theme.animation.cubicBezier};
 	}
 `;
 
 export const Policy = styled.div`
-	font-size: ${({ theme }) => theme.typography.size.xs};
+	font-size: ${({ theme }) => theme.typography.size.s};
 	display: flex;
 	flex-wrap: nowrap;
-	gap: ${({ theme }) => theme.spacing[3]};
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-		font-size: ${({ theme }) => theme.typography.size.s};
-	}
 
 	& > a {
+		padding: ${({ theme }) => theme.spacing[1]}
+			${({ theme }) => theme.spacing[2]};
+		text-align: center;
 		text-decoration: underline;
+		white-space: nowrap;
+		color: inherit;
+		transition: color ${({ theme }) => theme.animation.cubicBezier};
+
+		@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+			padding: ${({ theme }) => theme.spacing[1]};
+		}
 	}
 `;

@@ -2,19 +2,8 @@ import styled from 'styled-components';
 
 import { Button } from '../../common/Button';
 
-export const AboutStyled = styled.section`
-	padding: ${({ theme }) => theme.spacing[4]} 0;
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-		padding: ${({ theme }) => theme.spacing[5]} 0;
-	}
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-		padding: ${({ theme }) => theme.spacing[6]} 0;
-	}
-`;
-
 export const AboutContent = styled.div`
+	padding: ${({ theme }) => theme.spacing[4]} 0;
 	display: grid;
 	grid-gap: ${({ theme }) => theme.spacing[3]};
 
@@ -23,11 +12,13 @@ export const AboutContent = styled.div`
 	}
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+		padding: ${({ theme }) => theme.spacing[5]} 0;
 		grid-template-columns: 3fr 5fr;
 		grid-gap: ${({ theme }) => theme.spacing[4]};
 	}
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		padding: ${({ theme }) => theme.spacing[6]} 0;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: ${({ theme }) => theme.spacing[6]};
 	}

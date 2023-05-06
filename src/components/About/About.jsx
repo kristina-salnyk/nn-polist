@@ -9,7 +9,6 @@ import { ROUTES } from '../../constants';
 
 import {
 	AboutContent,
-	AboutStyled,
 	Accent,
 	BackImage,
 	ButtonStyled,
@@ -23,7 +22,7 @@ const About = () => {
 	const navigate = useNavigate();
 
 	return (
-		<AboutStyled>
+		<section>
 			<Container>
 				<AboutContent>
 					<Images>
@@ -68,7 +67,7 @@ const About = () => {
 					</Text>
 				</AboutContent>
 			</Container>
-		</AboutStyled>
+		</section>
 	);
 };
 

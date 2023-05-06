@@ -22,6 +22,7 @@ import {
 	FooterWrap,
 	Policy,
 	FooterContentStyled,
+	FooterColumnStyled,
 } from './Footer.styled';
 
 const Footer = () => {
@@ -39,16 +40,24 @@ const Footer = () => {
 								and manage all your job applications from start to finish.
 							</Text>
 							<Links>
-								<Instagram />
-								<Facebook />
-								<LinkedIn />
-								<Telegram />
+								<a href='/'>
+									<Instagram />
+								</a>
+								<a href='/'>
+									<Facebook />
+								</a>
+								<a href='/'>
+									<LinkedIn />
+								</a>
+								<a href='/'>
+									<Telegram />
+								</a>
 							</Links>
 						</FooterColumn>
-						<FooterColumn>
+						<FooterColumnStyled>
 							<Title>Site navigation</Title>
 							<NavigationStyled />
-						</FooterColumn>
+						</FooterColumnStyled>
 						<FooterColumn>
 							<Title>Contact information</Title>
 							<Contacts>
@@ -76,7 +85,9 @@ const Footer = () => {
 			<Container>
 				<FooterContentStyled>
 					<FooterColumn>
-						<Text>Copyright N.N. Polist, 2023. All rights reserved.</Text>
+						<Text>
+							Copyright &copy; N.N. Polist, 2023. All rights reserved.
+						</Text>
 					</FooterColumn>
 					<FooterColumn>
 						<Policy>
