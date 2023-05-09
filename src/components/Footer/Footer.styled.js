@@ -97,11 +97,11 @@ export const Contacts = styled.address`
 
 	& > a {
 		padding: ${({ theme }) => theme.spacing[1]};
-		color: inherit;
 		display: flex;
 		align-items: center;
 		gap: ${({ theme }) => theme.spacing[1]};
 		font-size: ${({ theme }) => theme.typography.size.s};
+		color: inherit;
 		transition: color ${({ theme }) => theme.animation.cubicBezier};
 	}
 `;
