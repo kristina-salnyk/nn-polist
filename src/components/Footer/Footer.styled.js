@@ -98,6 +98,7 @@ export const Contacts = styled.address`
 	& > a {
 		padding: ${({ theme }) => theme.spacing[1]};
 		display: flex;
+
 		align-items: center;
 		gap: ${({ theme }) => theme.spacing[1]};
 		font-size: ${({ theme }) => theme.typography.size.s};
