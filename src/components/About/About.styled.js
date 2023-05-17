@@ -22,6 +22,12 @@ export const AboutContent = styled.div`
 		grid-template-columns: 1fr 1fr;
 		grid-gap: ${({ theme }) => theme.spacing[6]};
 	}
+
+	@media (min-width: ${({ theme }) =>
+			theme.breakpoints.tablet[0]}) and (max-width: ${({ theme }) =>
+			theme.breakpoints.tablet[1]}) {
+		align-items: center;
+	}
 `;
 
 export const Images = styled.div`
@@ -39,6 +45,7 @@ export const Images = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		gap: ${({ theme }) => theme.spacing[2]};
 	}
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
